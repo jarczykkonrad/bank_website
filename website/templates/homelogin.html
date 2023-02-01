@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+<!--Takes the code from base but overwrites it with the code you type in here-->
+
+=======
+{% block logout %}
+        <a class="nav-item nav-link float-right" id="home" href="/logout" >Logout</a>
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block body %}
+
+
+
+<h1 style="color:white; text-align: center;">
+    Velkommen, {{ current_user }}!
+</h1>
+  
+  <div class="col-sm-12" style="background-color: darkslategray; opacity: 60%;">
+   <form>
+      <p style="color: white">
+          <label>Account username: {{ current_user }} </label> <br><label> Saldo: {{ saldo }} </label>
+          <a href="/add_money">
+              <input type="button" value="Add money" />
+          </a>
+      </p>
+  </form>
+  </div>
+</div>
+<div class="col-sm-12" style="background-color: rgb(97, 186, 238); margin-top: 50pt;">
+  <div class="bg-text">
+      <div style="width: 35%; float: left;">
+      <h3> Velkommen til oss!</h3>
+      <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+          Alle har banker de er ufornøyd med, skulle det være mangel av sikkerhet eller tilgjengelighet eller brukervennlighet.
+          Her i Bank A løser vi alle disse problemene for deg! Som en enkel og trygg bank tilbyr vi deg en plass du kan spare opp pengene
+          og kalle et hjem. Vi har alltid oppdatert teknologi til sikkerhet og vi fokuserer alltid på kundene! Sett opp din egen bank hos Bank A idag! 
+      </p> 
+      </div>
+      <!--<img src="{{url_for('static', filename='Diverse_smiles.jpeg')}}" style="width: 62%; opacity: 70%; float: right;">-->
+  </div>
+
+
+
+  {% endblock %}
+  
+

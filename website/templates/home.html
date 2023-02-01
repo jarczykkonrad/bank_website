@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+<!--Takes the code from base but overwrites it with the code you type in here-->
+{% block title %}Home{% endblock %}
+{% block body %}
+<div style="
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  width: 300px;
+  height: 600px;
+  border: 3px solid black;      
+  ">    
+    <h3 style="color: #FF7F50;">About Us</h3>
+    <p1>
+        After months of complaining to the banking website that their website wasn't secure enough, we took it to our own hands. <br><br>
+        We started as a small development team with only five people with one goal security over beauty. <br><br>
+        After months of hard work we started to realise that No Technology That's Connected To The Internet Is Unhackable. <br><br><br>
+    </p1>
+    <h6>So please don't store your money here!</h6>
+</div>
+
+
+<div style="
+  position: absolute;
+  top: 150px;
+  right: 1200px;
+  width: 500px;
+  height: 200px;
+  border: 3px solid black;      
+  ">
+  <h3 style="color: #FF7F50;">We would like to have you as our customer!</h3>
+  <br>
+  <p4>Pssssst! We have a sign-up bonus up to 1 million dollars</p4>
+  <br>
+  <br>
+  <button class="btn btn-lg btn-block btn-dark" onclick="window.location.href='/sign-up'">Become a customer now!</button>
+  
+</div>
+<div style="
+  position: absolute;
+  top: 500px;
+  right: 1200px;
+  width: 250px;
+  height: 250px;
+    ">
+    <img src="{{url_for('static', filename='family.png')}}" style="position: absolute; width: 600px; height: 400px;">
+</div>
+
+<div style="
+  position: absolute;
+  top: 125px;
+  right: 600px;
+  width: 400px;
+  height: 325px;
+  border: 3px solid black;      
+  ">    
+    <h3 style="color: #FF7F50;">Take up loan with 0% Interest!</h3>
+    <p2>I know it sounds too far fetched, <br> but <a style="color: #FF7F50;" href="/sign-up">Sign-Up</a> or <a style="color: #FF7F50;" href="/login">Log in</a> to find out!</p2>
+
+
+</div>
+<div style="
+  position: absolute;
+  top: 200px;
+  right: 675px;
+  width: 250px;
+  height: 250px;
+    ">
+    <img src="{{url_for('static', filename='money.png')}}" style="position: absolute; width: 150px; height: 150px;">
+</div>
+
+<div style="
+  position: absolute;
+  top: 475px;
+  left: 950px;
+  width: 500px;
+  height: 325px;
+  border: 3px solid black;      
+  ">
+  <h3 style="color: #FF7F50;">Start building your wealth! Make a transaction</h3>
+  <br>
+  <button class="btn btn-lg btn-block btn-dark" onclick="window.location.href='/transaction'">Build Wealth!</button>
+</div>
+
+<div style="
+  position: absolute;
+  top: 610px;
+  left: 950px;
+  width: 500px;
+  height: 200px;
+    ">
+    <img src="{{url_for('static', filename='wealth.png')}}" style="position: absolute; width: 150px; height: 150px;">
+</div>
+{% endblock %}

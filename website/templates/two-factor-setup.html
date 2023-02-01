@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!--Takes the code from base but overwrites it with the code you type in here-->
+{% block title %}Two factor verification setup{% endblock %}
+{% block body %}
+<div>
+  <h1>Setup Two Step Verification</h1>
+<div class="form-group">
+  <p1>Quick setup guide to enable 2FA on your account</p1>
+  <ul>
+    <li>Start by downloading <a href="https://apps.apple.com/us/app/google-authenticator/id388497605">Google Authenticator</a> on your mobile device</li>
+    <li>Open the app and scan the QR-code</li>
+    <li>You will now see that there is a one time password resetting every few <br> seconds that you will need when logging in to your account.</li>
+    <li>Finished? Go to <a type="link" href="/login">Log in!</a> </li>
+    <li><a style="color: red;font-size: 20px;">You will not be able to scan this a second time!</a></li>
+  </ul>
+ 
+</div>
+
+</div>
+<img src="{{ qrcode(qr_link) }}" alt="qr-kode">
+
+
+
+{% endblock %}

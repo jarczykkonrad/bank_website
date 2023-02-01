@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+<!--Takes the code from base but overwrites it with the code you type in here-->
+
+=======
+{% block logout %}
+        <a class="nav-item nav-link float-right" id="home" href="/logout" >Logout</a>
+{% endblock %}
+
+{% block title %}Add money{% endblock %}
+{% block body %}
+<body class="text-center">
+  <div class="container">
+    <form method="POST" class="form-register">
+      {{ form.csrf_token }}
+      {{ form.hidden_tag() }}
+      <h1 align='center' >
+        Please choose amount and from which credit card You would like to top up You bank account
+      </h1>
+      <br>
+      <br>
+
+      {{ form.amount.label() }}
+      {{ form.amount(class="form-control", placeholder="Amount") }}
+
+      {{ form.cardholder.label() }}
+      {{ form.cardholder(class="form-control", placeholder="Name, which stays on credit card") }}
+
+      {{ form.cardnumber.label() }}
+      {{ form.cardnumber(class="form-control", placeholder="Credit card number") }}
+
+      <br>
+
+      {{ form.submit(class="btn btn-lg btn-block btn-dark") }}
+    </form>
+    {% for field, errors in form.errors.items() %}
+  <p1 style="color: red;">
+    {{ ', '.join(errors) }}
+  </p1>
+{% endfor %}
+  </div>
+</body>
+{% endblock %}

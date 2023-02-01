@@ -1,0 +1,12 @@
+WTForms==2.3.3
+pyotp==2.6.0
+Flask==2.0.1
+Werkzeug==2.0.1
+Flask_ReCaptcha==0.4.2
+Flask_SQLAlchemy==2.5.1
+click==8.0.1
+Flask_QRcode==3.0.0
+SQLAlchemy==1.4.23
+Flask_Login==0.5.0
+Flask_WTF==0.15.1
+flask_talisman==0.8.1

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+<!--Takes the code from base but overwrites it with the code you type in here-->
+{% block title %}Sign Up{% endblock %}
+{% block body %}
+<body class="text-center">
+  <style>
+    input{
+      width: 40% !important;
+      margin: auto;
+    }
+    text{
+      margin: auto;
+    }
+  </style>
+  <div class="container">
+    <form method="POST" class="form-register" style="color:black">
+      {{ form.csrf_token }}
+      {{ form.hidden_tag() }}
+      <h1 align='center' style="font-family: Monospace; color: black; font-size: 35px;">
+        Please Create your Account
+      </h1>
+      <br>
+      <br>
+
+      {{ form.username.label() }}
+      {{ form.username(class="form-control", placeholder="Username") }}
+
+      {{ form.email.label() }}
+      {{ form.email(class="form-control", placeholder="Email Address") }}
+
+      {{ form.password1.label() }}
+      {{ form.password1(class="form-control", placeholder="Password") }}
+    
+      {{ form.password2.label() }}
+      {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+
+      <br>
+        {{ form.recaptcha }}
+        <style>
+          .text-center {
+              text-align: center;
+          }
+      
+          .g-recaptcha {
+              display: inline-block;
+          }
+      </style>
+      <br>
+
+      {{ form.submit(class="btn btn-lg btn-block btn-dark") }}
+    </form>
+    {% for field, errors in form.errors.items() %}
+  <p1 style="color: red;">
+    {{ ', '.join(errors) }}
+  </p1>
+{% endfor %}
+<a href="/login">Already have an account? Log-in here!</a>
+  </div>
+</body>
+{% endblock %}
